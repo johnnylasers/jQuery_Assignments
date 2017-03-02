@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery!</title>
+    <style>
+      .selectedColor{color: red;}
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.hide').click(function(){
+            $('p').hide();
+          })
+
+          $('.show').click(function(){
+            $('p').show();
+          })
+
+          // $('h2').hover(function(){
+          //   $('h3').text('Go to Space Needle instead!');
+          // })
+          $('.append').click(function(){
+            $('.result').append('<h4>.append adds HTML!</h4>');
+          })
+
+          $('.btnAddClass').click(function() {
+            $('.pAddClass').addClass("selectedColor");
+          })
+          $('.btnToggle').click(function(){
+            $('.pToggle').toggle('slow');
+          })
+          $('.btnSlideUp').click(function(){
+            $('.pSlideUp').slideUp();
+          })
+          $('.btnSlideToggle').click(function(){
+            $('.pSlideToggle').slideToggle();
+          })
+          $('.btnFadeOut').click(function(){
+            $('.pFadeOut').fadeOut();
+          })
+      });
+    </script>
+
+
+  </head>
+  <body>
+    <p>This is a paragraph</p>
+    <p>This is another paragraph!</p>
+    <button class="hide">Hide all paragraphs!</button>
+    <button class="show">Show all paragraphs!</button>
+    <a href="http://www.google.com" class="mylink">Go to Google!</a>
+    <h2>Mountain View, California</h2>
+    <h3>Seattle, Washington</h3>
+    <button class="append">Click to see "Append" work!</button>
+    <div class="result"></div>
+
+    <div class="AddClass">
+      <h3 class="h3AddClass">AddClass</h3>
+      <button class="btnAddClass">AddClas</button>
+      <p class="pAddClass">Click the button to add class 'red' to this paragraph!</p>
+    </div>
+    <div class="Toggle">
+      <h3 class="h3Toggle">Toggle</h3>
+      <button class="btnToggle">Toggle</button>
+      <p class="pToggle">Click the button to toggle this paragraph!</p>
+    </div>
+    <div class="slideUp">
+      <h3 class="h3SlideUp">SlideUp</h3>
+      <button class="btnSlideUp">SlideUp</button>
+      <p class="pSlideUp">Click the button to how slideUp works!</p>
+    </div>
+    <div class="slideToggle">
+      <h3 class="h3SlideToggle">SlideToggle</h3>
+      <button class="btnSlideToggle">SlideToggle</button>
+      <p class="pSlideToggle">Click the button to how slideToggle works!</p>
+    </div>
+    <div class="fadeOut">
+      <h3 class="h3FadeOut">FadeOut</h3>
+      <button class="btnFadeOut">FadeOut</button>
+      <p class="pFadeOut">Click the button to how fadeOut works!</p>
+    </div>
+  </body>
+</html>
